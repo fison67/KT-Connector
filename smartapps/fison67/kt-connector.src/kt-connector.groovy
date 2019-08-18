@@ -134,7 +134,7 @@ def initialize() {
     state["messageIndex"] = 0;
     
     unschedule()
-    schedule("0 */1 * * * ?", takeTokenAuto)
+    schedule("0 */60 * * * ?", takeTokenAuto)
 }
 
 def takeTokenAuto(){
