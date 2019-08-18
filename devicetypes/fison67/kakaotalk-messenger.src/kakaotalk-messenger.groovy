@@ -34,7 +34,7 @@ include 'asynchttp_v1'
 metadata {
 	definition (name: "KakaoTalk Messenger", namespace: "fison67", author: "fison67") {
         capability "Speech Synthesis"
-         
+        capability "Actuator"
 	}
 
 	simulator {}
