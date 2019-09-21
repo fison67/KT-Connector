@@ -122,7 +122,7 @@ def makeParam(type, text){
             ],
             body: [
                 "receiver_uuids": JsonOutput.toJson(parent.getFriendsUUID()),
-                "template_object": JsonOutput.toJson(body).replace("\n","")
+                "template_object": JsonOutput.toJson(body).replace(">>", "\\n")
             ]
         ]
     	break
