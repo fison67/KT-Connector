@@ -1,5 +1,5 @@
 /**
- *  KakaoTalk Messenger (v.0.0.1)
+ *  KakaoTalk Messenger (v.0.0.2)
  *
  * MIT License
  *
@@ -106,10 +106,11 @@ def makeParam(type, text){
     	params = [
             uri: "https://kapi.kakao.com/v2/api/talk/memo/default/send",
             headers: [
-                'Authorization': 'Bearer ' + parent.getAccessToken()
+                'Authorization': 'Bearer ' + parent.getAccessToken(),
+          		'content-type' : 'application/x-www-form-urlencoded'
             ],
             body: [
-                "template_object": JsonOutput.toJson(body).replace("\n","")
+                "template_object": JsonOutput.toJson(body).replace(">>", "\\n")
             ]
         ]
     	break
