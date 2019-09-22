@@ -118,7 +118,8 @@ def makeParam(type, text){
     	params = [
             uri: "https://kapi.kakao.com/v1/api/talk/friends/message/default/send",
             headers: [
-                'Authorization': 'Bearer ' + parent.getAccessToken()
+                'Authorization': 'Bearer ' + parent.getAccessToken(),
+		'content-type' : 'application/x-www-form-urlencoded'
             ],
             body: [
                 "receiver_uuids": JsonOutput.toJson(parent.getFriendsUUID()),
