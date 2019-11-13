@@ -1,5 +1,5 @@
 /**
- *  KT Connector (v.0.0.1)
+ *  KT Connector (v.0.0.2)
  *
  * MIT License
  *
@@ -54,7 +54,7 @@ preferences {
 def mainPage() {
     dynamicPage(name: "mainPage", title: "KT Connector", nextPage: null, uninstall: true, install: true) {
    		section("Request New Devices"){
-        	input "client_id", "string", title: "Client ID", required: true, description:"Cient ID"
+        	input "client_id", "text", title: "Client ID", required: true, description:"Cient ID"
         }
         
         section() {
